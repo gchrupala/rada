@@ -155,10 +155,19 @@ header {
 }
 
 .topbar .brand {
+  display: inline-flex;
   margin-inline-end: auto;
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  padding: 0.15rem;
+}
+
+.topbar .brand svg {
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.topbar .brand:hover {
+  opacity: 0.7;
 }
 
 .topbar .nav-link {
@@ -190,7 +199,6 @@ header {
 
 @media (max-width: 480px) {
   .topbar { gap: 0.9rem; padding-block: 0.7rem; font-size: 1rem; }
-  .topbar .brand { font-size: 1.1rem; }
   .langs { gap: 0.6rem; padding-inline-start: 0.9rem; }
 }
 
