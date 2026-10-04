@@ -301,3 +301,27 @@ html[lang="fa"] .bio {
 html[lang="fa"] .stories a:lang(pl) {
   font-family: "EB Garamond", Garamond, "Times New Roman", serif;
 }
+
+.byline a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+html[lang="fa"] .byline {
+  font-style: normal;
+}
+
+html[lang="fa"] .story {
+  line-height: 2.1;
+  hyphens: none;
+}
+
+html[lang="fa"] .story em {
+  font-style: normal;
+  font-weight: 500;
+}
+
+html[lang="fa"] .chapter-no {
+  letter-spacing: 0;
+}
