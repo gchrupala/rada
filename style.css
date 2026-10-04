@@ -3,9 +3,7 @@
 html, body { margin: 0; }
 
 body {
-  min-height: 100vh;
-  color: #fff;
-  background: linear-gradient(to bottom, #000 0, #000 100vh, #fff 100%);
+  background: #000;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -15,6 +13,8 @@ header {
   display: grid;
   place-items: center;
   padding: 16px;
+  background: #000;
+  color: #fff;
 }
 
 h1 {
@@ -26,9 +26,14 @@ h1 {
   text-align: center;
 }
 
+.fade { height: 40vh; }
+.fade-to-white { background: linear-gradient(to bottom, #000, #fff); }
+.fade-to-black { height: 60vh; background: linear-gradient(to bottom, #fff, #000); }
+
 main {
+  background: #fff;
   color: #000;
-  padding: 16px 16px 30vh;
+  padding: 0 16px 4rem;
 }
 
 img {
@@ -36,4 +41,11 @@ img {
   width: min(360px, 80vw);
   height: auto;
   margin: 0 auto;
+}
+
+.bio {
+  max-width: 36rem;
+  margin: 3rem auto 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
 }
