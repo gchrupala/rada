@@ -271,7 +271,7 @@ main {
 
 img {
   display: block;
-  width: min(340px, 75vw);
+  width: min(380px, 85vw);
   height: auto;
   margin: 0 auto;
 }
