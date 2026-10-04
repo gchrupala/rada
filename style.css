@@ -128,42 +128,84 @@ body {
 }
 
 header {
-  padding: 3vh 16px 4vh;
+  padding: 7vh 16px 4vh;
   background: #000;
   color: #fff;
 }
 
-.lang {
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
-  justify-content: center;
-  gap: 1.25rem;
-  margin-bottom: 5vh;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.85rem max(16px, calc((100% - 60rem) / 2));
+  background: rgba(0, 0, 0, 0.92);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1.05rem;
 }
 
-.lang a {
+.topbar a {
   color: #fff;
-  opacity: 0.6;
   text-decoration: none;
 }
 
-.lang a:hover,
-.lang a[aria-current="page"] {
+.topbar .brand {
+  margin-inline-end: auto;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.topbar .nav-link {
+  opacity: 0.75;
+}
+
+.topbar .nav-link:hover,
+.topbar .langs a:hover {
   opacity: 1;
 }
 
-.lang a[aria-current="page"] {
+.langs {
+  display: flex;
+  gap: 0.8rem;
+  padding-inline-start: 1.25rem;
+  border-inline-start: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.langs a {
+  opacity: 0.55;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+.langs a[aria-current="page"] {
+  opacity: 1;
   border-bottom: 1px solid currentColor;
+}
+
+@media (max-width: 480px) {
+  .topbar { gap: 0.9rem; padding-block: 0.7rem; font-size: 1rem; }
+  .topbar .brand { font-size: 1.1rem; }
+  .langs { gap: 0.6rem; padding-inline-start: 0.9rem; }
+}
+
+#stories,
+.cyoa section {
+  scroll-margin-top: 5rem;
 }
 
 h1 {
   margin: 0;
   font-size: clamp(2.5rem, 9vw, 5.5rem);
   font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  line-height: 1.05;
+  text-wrap: balance;
+  letter-spacing: 0.01em;
   text-align: center;
 }
 
@@ -289,12 +331,12 @@ html[lang="fa"] .bio {
   line-height: 2;
 }
 
-.lang a:lang(fa) {
+.langs a:lang(fa) {
   font-family: Vazirmatn, Tahoma, sans-serif;
 }
 
-.lang a:lang(pl),
-.lang a:lang(en) {
+.langs a:lang(pl),
+.langs a:lang(en) {
   font-family: "EB Garamond", Garamond, "Times New Roman", serif;
 }
 
@@ -336,7 +378,6 @@ h1.h1-long {
 /* interactive story: show one section at a time */
 .cyoa section {
   display: none;
-  scroll-margin-top: 2rem;
 }
 
 .cyoa section:target,
@@ -401,6 +442,3 @@ html[lang="fa"] .stories a:lang(en) {
   font-family: "EB Garamond", Garamond, "Times New Roman", serif;
 }
 
-header > h1:first-child {
-  margin-top: 6vh;
-}
