@@ -23,6 +23,18 @@ body {
   padding: 16px;
 }
 
+main {
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: min(360px, 80vw);
+  height: auto;
+  margin: 0 auto 1.5rem;
+  border-radius: 6px;
+}
+
 h1 {
   font-size: clamp(3rem, 12vw, 8rem);
   font-weight: normal;
