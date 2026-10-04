@@ -11,6 +11,7 @@ body {
 
 header {
   min-height: 100vh;
+  min-height: 100svh;
   display: grid;
   place-items: center;
   padding: 16px;
@@ -21,7 +22,6 @@ h1 {
   font-size: clamp(3rem, 16vw, 12rem);
   font-weight: 900;
   line-height: 0.9;
-  letter-spacing: -0.02em;
   text-transform: uppercase;
   text-align: center;
 }
