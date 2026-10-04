@@ -1,3 +1,23 @@
+/* eb-garamond-latin-ext-400-italic */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: url(fonts/eb-garamond-latin-ext-400-italic.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+/* eb-garamond-latin-400-italic */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: url(fonts/eb-garamond-latin-400-italic.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
 /* eb-garamond-latin-ext-400-normal */
 @font-face {
   font-family: 'EB Garamond';
@@ -172,6 +192,90 @@ img {
   text-align: center;
 }
 
+.byline {
+  margin: 1rem 0 0;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.stories {
+  max-width: 36rem;
+  margin: 3rem auto 0;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.stories h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.stories ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stories a {
+  color: #000;
+  font-size: 1.6rem;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+.stories .note {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.story {
+  max-width: 34rem;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  hyphens: auto;
+}
+
+.story p {
+  margin: 0;
+  text-indent: 1.5em;
+}
+
+.story h2 {
+  margin: 0 0 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.story h2 + p {
+  text-indent: 0;
+}
+
+.story p + h2 {
+  margin-top: 4rem;
+}
+
+.chapter-no {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.story .tbc {
+  margin-top: 3rem;
+  text-indent: 0;
+  text-align: center;
+}
+
 html[lang="fa"] body {
   font-family: Vazirmatn, Tahoma, sans-serif;
 }
@@ -191,5 +295,9 @@ html[lang="fa"] .bio {
 
 .lang a:lang(pl),
 .lang a:lang(en) {
+  font-family: "EB Garamond", Garamond, "Times New Roman", serif;
+}
+
+html[lang="fa"] .stories a:lang(pl) {
   font-family: "EB Garamond", Garamond, "Times New Roman", serif;
 }
