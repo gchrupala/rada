@@ -245,6 +245,7 @@ header {
 }
 
 #stories,
+#gallery,
 .cyoa section {
   scroll-margin-top: 5rem;
 }
